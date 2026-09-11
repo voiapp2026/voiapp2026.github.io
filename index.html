@@ -97,6 +97,20 @@
   .card h3 { font-size: 16px; margin: 0 0 8px; }
   .card p { font-size: 15px; color: var(--text-secondary); margin: 0; }
 
+  .plan-note {
+    font-size: 15px; color: var(--text-secondary); margin: -8px 0 24px;
+  }
+  .plan-note strong { color: var(--text); font-weight: 600; }
+
+  .tag-paid {
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    background: var(--accent-dark); color: var(--surface);
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.03em;
+    vertical-align: middle; margin-left: 8px;
+  }
+  .card.paid { border-color: var(--accent-dark); }
+  .card h3 .tag-paid { margin-left: 0; margin-bottom: 6px; display: inline-block; }
+
   .promise-list { padding-left: 0; list-style: none; margin: 0; }
   .promise-list li {
     display: flex; gap: 12px; padding: 10px 0;
@@ -165,6 +179,10 @@
 
   <section id="features">
     <h2>できること</h2>
+    <p class="plan-note">
+      録音・話者識別・文字起こし・アプリ内での再生は、保存容量が許す限り<strong>無料</strong>でお使いいただけます。
+      文字起こしのコピー・書き出しや音声の書き出しは<strong>有料版</strong>の機能です。
+    </p>
     <div class="grid">
       <div class="card">
         <h3>話者を自動で聞き分け</h3>
@@ -190,9 +208,9 @@
         <h3>再生しながら読み返す</h3>
         <p>発言をタップすると、その場所から再生できます。読んでいる単語がハイライトされ、無音の間は自動で読み飛ばします。</p>
       </div>
-      <div class="card">
-        <h3>AIツールへの読み込みに</h3>
-        <p>話者ごとに整理された文字起こしをテキストで書き出せます（購入機能）。生成AIに読み込ませる素材として、そのまま活用できます。</p>
+      <div class="card paid">
+        <h3><span class="tag-paid">有料版</span><br>AIツールへの読み込みに</h3>
+        <p>文字起こしのコピー・書き出しや、音声ファイルの書き出しができるようになります。話者ごとに整理された文字起こしを、生成AIに読み込ませる素材として、そのまま活用できます。</p>
       </div>
     </div>
   </section>
