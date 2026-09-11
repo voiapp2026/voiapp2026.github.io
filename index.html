@@ -106,6 +106,21 @@
   .promise-list li:last-child { border-bottom: none; }
   .promise-list li .mark { color: var(--accent-dark); font-weight: 700; }
 
+  .screens-scroll {
+    display: flex; gap: 16px; overflow-x: auto;
+    padding: 4px 4px 12px; margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .screens-scroll img {
+    flex: 0 0 auto; width: 200px; border-radius: 22px;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .screens-scroll img { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4); }
+  }
+  :root[data-theme="dark"] .screens-scroll img { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4); }
+
   footer { padding: 40px 0 64px; }
   footer p { color: var(--text-secondary); font-size: 14px; }
   footer a { color: var(--text-secondary); }
@@ -137,6 +152,15 @@
       誰が何を話したかを文字起こしし、生成AIに読み込ませる素材として
       そのまま活用できます。
     </p>
+  </section>
+
+  <section id="screenshots" style="border-top:none; padding-top:0;">
+    <div class="screens-scroll">
+      <img src="img/screens/3_recording.png" alt="録音中の画面" loading="lazy">
+      <img src="img/screens/1_transcript.png" alt="話者ごとの文字起こし画面" loading="lazy">
+      <img src="img/screens/2_list.png" alt="録音一覧の画面" loading="lazy">
+      <img src="img/screens/4_settings.png" alt="設定画面" loading="lazy">
+    </div>
   </section>
 
   <section id="features">
