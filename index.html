@@ -119,6 +119,9 @@
   .card.paid { border-color: var(--accent-dark); }
   .card h3 .tag-paid { margin-left: 0; margin-bottom: 6px; display: inline-block; }
 
+  .paid-list { margin: 8px 0 0; padding-left: 1.2em; font-size: 15px; color: var(--text-secondary); }
+  .paid-list li { margin: 2px 0; }
+
   .promise-list { padding-left: 0; list-style: none; margin: 0; }
   .promise-list li {
     display: flex; gap: 12px; padding: 10px 0;
@@ -180,6 +183,9 @@
     <div class="screens-scroll">
       <img src="img/screens/1_recording.png" alt="録音中の画面" loading="lazy">
       <img src="img/screens/2_transcript.png" alt="話者ごとの文字起こし画面" loading="lazy">
+      <img src="img/screens/5_crop.png" alt="斜めから撮った資料の枠を合わせる画面" loading="lazy">
+      <img src="img/screens/6_photos.png" alt="写真・資料の一覧の画面" loading="lazy">
+      <img src="img/screens/7_minutes.png" alt="資料の写真が載った議事録の画面" loading="lazy">
       <img src="img/screens/3_list.png" alt="録音一覧の画面" loading="lazy">
       <img src="img/screens/4_settings.png" alt="設定画面" loading="lazy">
     </div>
@@ -188,8 +194,8 @@
   <section id="features">
     <h2>できること</h2>
     <p class="plan-note">
-      録音・話者識別・文字起こし・アプリ内での再生は、保存容量が許す限り<strong>無料</strong>でお使いいただけます。
-      文字起こしのコピー・書き出しや音声の書き出しは<strong>有料版</strong>の機能です。
+      端末の中で行う操作は、保存容量が許す限り<strong>無料</strong>です（録音・話者識別・文字起こし・再生・議事録づくり・写真の追加）。
+      コピー・共有・保存など、外に持ち出す操作は<strong>有料版</strong>（買い切り）の機能です。
     </p>
     <div class="grid">
       <div class="card">
@@ -216,9 +222,29 @@
         <h3>議事録を自動で作成</h3>
         <p>議題・決定事項・TODOなど、選んだ項目に沿って文字起こしから議事録を作ります。端末内のAppleの言語モデルのみを使用し、外部には送信しません。無料でお使いいただけます。※Apple Intelligenceに対応した端末が必要です。</p>
       </div>
+      <div class="card">
+        <h3>写真・資料を追加</h3>
+        <p>録音のあとから、会議で出た資料やホワイトボードの写真を、カメラまたは写真から追加できます。斜めから撮っても、四隅の枠を合わせて、まっすぐな長方形に整えます。枠は最初に自動で探します。写真の処理は、端末の中だけで行います。</p>
+      </div>
+      <div class="card">
+        <h3>写真を議事録に活かす</h3>
+        <p>写真から読み取った文字を、議事録を作るときの参考にできます。議事録の画面に、写真そのものを載せることもできます。どちらも、写真ごとに、使う・使わないを選べます。</p>
+      </div>
+      <div class="card">
+        <h3>人数を指定してやり直す</h3>
+        <p>文字起こしのあとから、話す人数を指定して、話者の聞き分けをやり直せます。</p>
+      </div>
       <div class="card paid">
-        <h3><span class="tag-paid">有料版</span><br>AIツールへの読み込みに</h3>
-        <p>文字起こしのコピー・書き出しや、音声ファイルの書き出しができるようになります。話者ごとに整理された文字起こしを、生成AIに読み込ませる素材として、そのまま活用できます。</p>
+        <h3><span class="tag-paid">有料版</span><br>外に持ち出す</h3>
+        <p>買い切りで、次のことができます。</p>
+        <ul class="paid-list">
+          <li>文字起こしのコピー</li>
+          <li>文字起こし・議事録の共有・保存（文字・PDF・文書ファイル(.docx)。写真つき）</li>
+          <li>音声ファイルの共有・保存</li>
+          <li>写真から読み取った文字のコピー</li>
+          <li>画面下の他アプリ案内を非表示</li>
+        </ul>
+        <p style="margin-top:12px;">話者ごとに整理された文字起こしを、生成AIに読み込ませる素材として、そのまま活用できます。</p>
       </div>
     </div>
   </section>
@@ -228,6 +254,7 @@
     <ul class="promise-list">
       <li><span class="mark">◯</span> 録音・話者の聞き分け・文字起こしは、すべてこの端末の中だけで行います</li>
       <li><span class="mark">◯</span> あなたが操作するまで、音声や文字起こしの内容がどこかに送信されることはありません</li>
+      <li><span class="mark">◯</span> 写真の枠合わせと文字の読み取りも、この端末の中だけで行い、写真を外部に送ることはありません</li>
       <li><span class="mark">◯</span> アプリ本体には広告や、行動を追跡する仕組みを組み込んでいません</li>
     </ul>
     <p style="margin-top:20px;">
